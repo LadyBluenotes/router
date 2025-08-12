@@ -87,3 +87,19 @@ export {
   flattenMiddlewares,
   executeMiddleware,
 } from './createServerFn'
+
+
+export type {
+AnyStartConfig,
+CreateStartOptions,
+ResolveStartRouter,
+StartConfig,
+StartConfigTypes,
+ValidateStartOptions,
+RegisteredStartConfig,
+RegisteredRequestContext
+} from './createStart'
+
+export { createStart } from './createStart'
+
+export type { Register} from '@tanstack/router-core'

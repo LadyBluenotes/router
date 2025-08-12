@@ -92,6 +92,7 @@ export type {
   ResolveValidatorInput,
   ResolveValidatorOutput,
   Register,
+  MetaRegister,
   AnyValidator,
   DefaultValidator,
   ValidatorFn,
