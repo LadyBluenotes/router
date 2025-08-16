@@ -55,10 +55,6 @@ export {
   type FunctionServerResultWithContext,
   type AnyRequestMiddleware,
 } from './createMiddleware'
-export {
-  registerGlobalMiddleware,
-  globalMiddleware,
-} from './registerGlobalMiddleware'
 export type {
   CompiledFetcherFnOptions,
   CompiledFetcherFn,
@@ -92,6 +88,7 @@ export {
 export type {
 AnyStartConfig,
 CreateStartOptions,
+CreateStart,
 ResolveStartRouter,
 StartConfig,
 StartConfigTypes,
@@ -100,6 +97,8 @@ RegisteredStartConfig,
 RegisteredRequestContext
 } from './createStart'
 
-export { createStart } from './createStart'
+export { defineStart } from './createStart'
 
 export type { Register} from '@tanstack/router-core'
+
+export { hydrateStart} from './hydrateStart'

@@ -108,7 +108,7 @@ export type RegisteredRouter = [FindRouter] extends [never]
 export interface AdditionalRegister {}
 
 export interface MetaRegister {
-  //router: unknown
+  // router: unknown
 }
 
 export interface DefaultRegister extends AdditionalRegister {

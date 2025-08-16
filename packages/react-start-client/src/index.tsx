@@ -4,8 +4,6 @@ export {
   createIsomorphicFn,
   createServerFn,
   createMiddleware,
-  registerGlobalMiddleware,
-  globalMiddleware,
   serverOnly,
   clientOnly,
   json,

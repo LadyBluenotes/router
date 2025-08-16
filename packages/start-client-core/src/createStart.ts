@@ -1,50 +1,49 @@
 import type {
   AnyRouter,
+  Awaitable,
   Constrain,
   LooseReturnType,
   Register,
-  Register as RouterRegister,
 } from '@tanstack/router-core'
+import type { AnyFunctionMiddleware, AnyRequestMiddleware } from './createMiddleware'
 
-export interface DefaultRegister  {
-  server: {
-    requestContext: unknown
-  }
-  start: AnyStartConfig
-}
 
 declare module '@tanstack/router-core' {
     interface AdditionalRegister {
-        start: AnyStartConfig
+        createStart: AnyStartConfig
         server: {
             requestContext: unknown
         }
     }
     interface MetaRegister {
-        router: 'start'
+        router: 'createStart'
     }
   }
 
 
 
-    
-export type RegisteredStartConfig = Register['start']
-export type RegisteredRequestContext = RouterRegister['server']['requestContext']
+export type CreateStart<TCreateStartOptions extends CreateStartOptions = CreateStartOptions> = () => Awaitable<TCreateStartOptions>
+export type RegisteredStartConfig = Register['createStart']
+export type RegisteredRequestContext = Register['server']['requestContext']
 export type AnyStartConfig = StartConfig<any>
-export interface CreateStartOptions {
-  router: AnyRouter
+export type AnyCreateStartOptions = CreateStartOptions<any>
+export interface CreateStartOptions<TRouter extends AnyRouter = AnyRouter> {
+  router: TRouter
+  middlewares?: {
+    request?: Array<AnyRequestMiddleware>
+    function?: Array<AnyFunctionMiddleware>
+  }
 }
 export type ValidateStartOptions<TOptions> = Constrain<
   TOptions,
-  () => CreateStartOptions
->
-export const createStart = <TOptions>(
-  options: ValidateStartOptions<TOptions>,
+  () =>  CreateStartOptions>
+export const defineStart = <TOptions>(
+  createStart: ValidateStartOptions<TOptions>,
 ) => {
-  return {} as unknown as StartConfig<TOptions>
+  return createStart as unknown as StartConfig<TOptions>
 }
 
-export interface StartConfig<TOptions> {
+export type StartConfig<TOptions> = {
   '~types': StartConfigTypes<TOptions>
 }
 
@@ -58,3 +57,5 @@ export type ResolveStartRouter<TOptions> = unknown extends TOptions
   : LooseReturnType<TOptions> extends CreateStartOptions
     ? LooseReturnType<TOptions>['router']
     : never
+
+

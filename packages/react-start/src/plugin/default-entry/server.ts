@@ -3,10 +3,10 @@ import {
   defaultStreamHandler,
 } from '@tanstack/react-start/server'
 
-import { createRouter } from '#tanstack-start-router-entry'
+import {createStart} from '#tanstack-start-createStart-entry'
 
 const fetch = createStartHandler({
-  createRouter,
+  createStart,
 })(defaultStreamHandler)
 
 export default {

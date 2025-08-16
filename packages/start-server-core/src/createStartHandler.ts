@@ -22,6 +22,9 @@ import { loadVirtualModule } from './loadVirtualModule'
 
 import { HEADERS } from './constants'
 import type {
+  AnyStartConfig,
+  CreateStart} from '@tanstack/start-client-core';
+import type {
   AnyServerRouteWithTypes,
   ServerRouteMethodHandlerFn,
 } from './serverRoute'
@@ -29,7 +32,6 @@ import type { RequestHandler } from './request-response'
 import type {
   AnyRoute,
   AnyRouter,
-  Awaitable,
   Manifest,
   ProcessRouteTreeResult,
 } from '@tanstack/router-core'
@@ -54,11 +56,11 @@ function getStartResponseHeaders(opts: { router: AnyRouter }) {
   return headers
 }
 
-export function createStartHandler<TRouter extends AnyRouter>({
-  createRouter,
+export function createStartHandler<TStartConfig extends AnyStartConfig>({
+  createStart,
 }: {
-  createRouter: () => Awaitable<TRouter>
-}): CustomizeStartHandler<TRouter> {
+  createStart: CreateStart
+}): CustomizeStartHandler<TStartConfig['~types']['router']> {
   let routeTreeModule: {
     serverRouteTree: AnyServerRouteWithTypes | undefined
     routeTree: AnyRoute | undefined
@@ -116,8 +118,8 @@ export function createStartHandler<TRouter extends AnyRouter>({
       const APP_BASE = process.env.TSS_APP_BASE || '/'
 
       // TODO how does this work with base path? does the router need to be configured the same as APP_BASE?
-      const router = await createRouter()
-
+      const start = await createStart()
+      const router = start.router
       // Create a history for the client-side router
       const history = createMemoryHistory({
         initialEntries: [href],
@@ -180,7 +182,7 @@ export function createStartHandler<TRouter extends AnyRouter>({
           }
 
           const executeRouter = () =>
-            runWithStartContext({ router }, async () => {
+            runWithStartContext(start, async () => {
               const requestAcceptHeader = request.headers.get('Accept') || '*/*'
               const splitRequestAcceptHeader = requestAcceptHeader.split(',')
 
@@ -232,6 +234,7 @@ export function createStartHandler<TRouter extends AnyRouter>({
               return response
             })
 
+            
           // If we have a server route tree, then we try matching to see if we have a
           // server route that matches the request.
           if (processedServerRouteTree) {

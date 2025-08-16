@@ -122,9 +122,9 @@ const pageSchema = pageBaseSchema.extend({
 const tanstackStartOptionsSchema = z
   .object({
     tsr: tsrConfig.optional().default({}),
-    router: z
+    // TODO naming?
+    start: z
       .object({
-        // TODO naming?
         entry: z.string().optional(),
       })
       .optional()
