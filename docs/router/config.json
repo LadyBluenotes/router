@@ -142,12 +142,16 @@
           "label": "react",
           "children": [
             {
-              "label": "Routing Concepts",
-              "to": "framework/react/routing/routing-concepts"
+              "label": "Project Structure",
+              "to": "framework/react/routing/project-structure"
             },
             {
-              "label": "Route Trees",
-              "to": "framework/react/routing/route-trees"
+              "label": "Defining Routes",
+              "to": "framework/react/routing/defining-routes"
+            },
+            {
+              "label": "Nesting & Layouts",
+              "to": "framework/react/routing/nesting-and-layouts"
             },
             {
               "label": "Route Matching",
@@ -175,12 +179,16 @@
           "label": "solid",
           "children": [
             {
-              "label": "Routing Concepts",
-              "to": "framework/solid/routing/routing-concepts"
+              "label": "Project Structure",
+              "to": "framework/solid/routing/project-structure"
             },
             {
-              "label": "Route Trees",
-              "to": "framework/solid/routing/route-trees"
+              "label": "Defining Routes",
+              "to": "framework/solid/routing/defining-routes"
+            },
+            {
+              "label": "Nesting & Layouts",
+              "to": "framework/solid/routing/nesting-and-layouts"
             },
             {
               "label": "Route Matching",
