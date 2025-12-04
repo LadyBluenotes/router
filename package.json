@@ -32,7 +32,8 @@
     "set-ts-version": "node scripts/set-ts-version.js",
     "labeler-generate": "node scripts/generate-labeler-config.mjs",
     "cleanup-empty-packages": "node scripts/cleanup-empty-packages.mjs",
-    "verify-links": "node scripts/verify-links.ts"
+    "verify-links": "node scripts/verify-links.ts",
+    "sync-docs-config": "node scripts/sync-docs-config.ts"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
