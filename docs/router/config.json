@@ -8,19 +8,36 @@
   "sections": [
     {
       "label": "Getting Started",
-      "children": [],
+      "children": [
+        {
+          "label": "Overview",
+          "to": "overview"
+        },
+        {
+          "label": "Quick Start",
+          "to": "quick-start"
+        },
+        {
+          "label": "Devtools",
+          "to": "devtools"
+        },
+        {
+          "label": "LLM Assistance Support",
+          "to": "llm-support"
+        },
+        {
+          "label": "Decisions on DX",
+          "to": "decisions-on-dx"
+        },
+        {
+          "label": "Frequently Asked Questions",
+          "to": "faq"
+        }
+      ],
       "frameworks": [
         {
           "label": "react",
           "children": [
-            {
-              "label": "Overview",
-              "to": "framework/react/overview"
-            },
-            {
-              "label": "Quick Start",
-              "to": "framework/react/quick-start"
-            },
             {
               "label": "Devtools",
               "to": "framework/react/devtools"
@@ -46,14 +63,6 @@
         {
           "label": "solid",
           "children": [
-            {
-              "label": "Overview",
-              "to": "framework/solid/overview"
-            },
-            {
-              "label": "Quick Start",
-              "to": "framework/solid/quick-start"
-            },
             {
               "label": "Devtools",
               "to": "framework/solid/devtools"
