@@ -22,12 +22,12 @@
           "to": "devtools"
         },
         {
-          "label": "LLM Assistance Support",
-          "to": "llm-support"
-        },
-        {
           "label": "Decisions on DX",
           "to": "decisions-on-dx"
+        },
+        {
+          "label": "LLM Assistance Support",
+          "to": "llm-support"
         },
         {
           "label": "Frequently Asked Questions",
@@ -39,37 +39,8 @@
           "label": "react",
           "children": [
             {
-              "label": "Decisions on DX",
-              "to": "framework/react/decisions-on-dx"
-            },
-            {
-              "label": "LLM Assistance Support",
-              "to": "framework/react/llm-support"
-            },
-            {
               "label": "Comparison",
               "to": "framework/react/comparison"
-            },
-            {
-              "label": "Frequently Asked Questions",
-              "to": "framework/react/faq"
-            }
-          ]
-        },
-        {
-          "label": "solid",
-          "children": [
-            {
-              "label": "Decisions on DX",
-              "to": "framework/solid/decisions-on-dx"
-            },
-            {
-              "label": "LLM Assistance Support",
-              "to": "framework/solid/llm-support"
-            },
-            {
-              "label": "Frequently Asked Questions",
-              "to": "framework/solid/faq"
             }
           ]
         }

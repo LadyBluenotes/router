@@ -9,9 +9,10 @@ TanStack Router's documentation is integrated into its NPM module, making it ava
 
 To use `vibe-rules`, install it globally using your package manager of choice. For example, with `pnpm`:
 
-```bash
-pnpm add -g vibe-rules
-```
+<!-- ::start:tabs variant="package-manager" -->
+react: -g vibe-rules
+solid: -g vibe-rules
+<!-- ::end:tabs -->
 
 Once installed, you can then run it in the editor of your choice. For example, to integrate with Cursor:
 
@@ -25,7 +26,7 @@ vibe-rules install cursor
 
 > [!IMPORTANT]
 > If you're using [Yarn Workspaces](https://yarnpkg.com/features/workspaces), you will need to add the following configuration to your `.yarnrc.yaml` file of your application that uses TanStack Router:
-
+> 
 > ```yaml
 > pnpFallbackMode: all
 > pnpMode: loose

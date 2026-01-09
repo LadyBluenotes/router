@@ -16,7 +16,7 @@ These frameworks and routers have their strengths, but they also come with trade
 ## Is TanStack Router a framework?
 
 TanStack Router itself is not a "framework" in the traditional sense, since it doesn't address a few other common full-stack concerns. However, TanStack Router has been designed to be upgradable to a full-stack framework when used in conjunction with other tools that address bundling, deployments, and server-side-specific functionality. This is why we are currently developing [TanStack Start](https://tanstack.com/start), a full-stack framework that is built on top of TanStack Router and Vite.
-For a deeper dive on the history of TanStack Router, feel free to read [TanStack Router's History](../decisions-on-dx.md#tanstack-routers-origin-story).
+For a deeper dive on the history of TanStack Router, feel free to read [TanStack Router's History](decisions-on-dx.md#tanstack-routers-origin-story).
 
 ## Should I commit my `routeTree.gen.ts` file into git?
 
@@ -35,8 +35,7 @@ You can restrict access to these routes using a conditional check in the `before
 <details>
 <summary>What does this look like?</summary>
 
-```tsx
-// src/routes/_pathless-layout.tsx
+```tsx title="src/routes/_pathless-layout.tsx"
 import { createFileRoute, Outlet } from '@tanstack/react-router'
 import { isAuthenticated } from '../utils/auth'
 
