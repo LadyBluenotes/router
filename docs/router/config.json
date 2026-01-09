@@ -39,10 +39,6 @@
           "label": "react",
           "children": [
             {
-              "label": "Devtools",
-              "to": "framework/react/devtools"
-            },
-            {
               "label": "Decisions on DX",
               "to": "framework/react/decisions-on-dx"
             },
@@ -63,10 +59,6 @@
         {
           "label": "solid",
           "children": [
-            {
-              "label": "Devtools",
-              "to": "framework/solid/devtools"
-            },
             {
               "label": "Decisions on DX",
               "to": "framework/solid/decisions-on-dx"
