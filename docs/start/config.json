@@ -8,51 +8,31 @@
   "sections": [
     {
       "label": "Getting Started",
-      "children": [],
+      "children": [
+        {
+          "label": "Overview",
+          "to": "overview"
+        },
+        {
+          "label": "Getting Started",
+          "to": "getting-started"
+        },
+        {
+          "label": "Quick Start",
+          "to": "quick-start"
+        },
+        {
+          "label": "Build from Scratch",
+          "to": "build-from-scratch"
+        }
+      ],
       "frameworks": [
         {
           "label": "react",
           "children": [
             {
-              "label": "Overview",
-              "to": "framework/react/overview"
-            },
-            {
-              "label": "Getting Started",
-              "to": "framework/react/getting-started"
-            },
-            {
-              "label": "Quick Start",
-              "to": "framework/react/quick-start"
-            },
-            {
-              "label": "Build from Scratch",
-              "to": "framework/react/build-from-scratch"
-            },
-            {
               "label": "Migrate from Next.js",
               "to": "framework/react/migrate-from-next-js"
-            }
-          ]
-        },
-        {
-          "label": "solid",
-          "children": [
-            {
-              "label": "Overview",
-              "to": "framework/solid/overview"
-            },
-            {
-              "label": "Getting Started",
-              "to": "framework/solid/getting-started"
-            },
-            {
-              "label": "Quick Start",
-              "to": "framework/solid/quick-start"
-            },
-            {
-              "label": "Build from Scratch",
-              "to": "framework/solid/build-from-scratch"
             }
           ]
         }
