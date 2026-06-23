@@ -1,5 +1,12 @@
 # @tanstack/start-plugin-core
 
+## 1.171.19
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @tanstack/start-server-core@1.169.16
+
 ## 1.171.18
 
 ### Patch Changes
