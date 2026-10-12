@@ -1,5 +1,14 @@
 # @tanstack/start-static-server-functions
 
+## 1.167.41
+
+### Patch Changes
+
+- Updated dependencies [[`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:
+  - @tanstack/start-client-core@1.170.36
+  - @tanstack/react-start@1.168.62
+  - @tanstack/solid-start@1.168.59
+
 ## 1.167.40
 
 ### Patch Changes

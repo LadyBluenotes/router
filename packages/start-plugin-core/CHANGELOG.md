@@ -1,5 +1,19 @@
 # @tanstack/start-plugin-core
 
+## 1.171.51
+
+### Patch Changes
+
+- [#8692](https://github.com/TanStack/router/pull/8692) [`f3d7ee3`](https://github.com/TanStack/router/commit/f3d7ee3374c660e0fe82a03ac580a90ed2e2fa98) - Image and news sitemap entries are now emitted in their declared XML namespaces, so sitemaps with images or news are valid XML.
+
+- [#8691](https://github.com/TanStack/router/pull/8691) [`19524cc`](https://github.com/TanStack/router/commit/19524ccdd75870ce1db2f324518eeb3f23cc0f97) - Publish only validated public page fields in pages.json and sitemap.xml so prerender headers and other private page data, including extra data returned by `prerender.onSuccess`, stay private. Invalid sitemap metadata returned by `prerender.onSuccess` now fails the build instead of being written to sitemap.xml without validation.
+
+- Updated dependencies [[`57bd1a9`](https://github.com/TanStack/router/commit/57bd1a92f9839af5bf773c3b36d039569fb1a41e), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`e66da18`](https://github.com/TanStack/router/commit/e66da18266859ab49e20a7b8c858232449ee5290), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:
+  - @tanstack/router-generator@1.167.42
+  - @tanstack/router-core@1.171.36
+  - @tanstack/start-server-core@1.169.41
+  - @tanstack/router-plugin@1.168.44
+
 ## 1.171.50
 
 ### Patch Changes
