@@ -1,5 +1,19 @@
 # @tanstack/start-client-core
 
+## 1.170.36
+
+### Patch Changes
+
+- [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Reduce request middleware overhead, reuse loaded entries and transport header requirements, and avoid unnecessary URL normalization for server functions. Preserve response helper writes made during body cancellation and SSR cleanup.
+
+  Avoid allocating absent middleware headers and reply context, and construct RPC redirects with their final response state. Preserve middleware accessor evaluation and the documented undefined value for absent `sendContext`.
+
+  Reduce synchronous server-function response overhead while preserving cancellation cleanup and middleware response mutations.
+
+- Updated dependencies [[`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:
+  - @tanstack/router-core@1.171.36
+  - @tanstack/start-storage-context@1.167.38
+
 ## 1.170.35
 
 ### Patch Changes
